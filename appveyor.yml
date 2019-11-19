@@ -1,5 +1,5 @@
 version: '{branch}-{build}'
-image: Previous Visual Studio 2015
+image: Previous Visual Studio 2017
 clone_folder: C:\projects\oiio
 test: off
 configuration:
@@ -12,10 +12,10 @@ platform:
 #     - master
 environment:
   matrix:
-    - CMAKE_PLATFORM: "Visual Studio 14 2015 Win64"
+    - CMAKE_PLATFORM: "Visual Studio 15 2017 Win64"
       PYTHON_DIR: "C:\\Python27-x64"
       tbs_arch: "x64"
-      tbs_tools: "msvc14"
+      tbs_tools: "msvc15"
       tbs_static_runtime: 0
 
 cache:
