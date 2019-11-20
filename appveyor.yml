@@ -115,6 +115,13 @@ build_script:
   - dir c:\projects\oiio\build\windows64
   - cmake --build . --config %CONFIGURATION%
 
+after_build:
+    - cd C:\projects\oiio
+    - 7z a oiio.zip C:\projects\oiio\build
+
+artifacts:
+  - path: oiio.zip
+    name: OpenImageIO
 
 matrix:
     fast_finish: true
