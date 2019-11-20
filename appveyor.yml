@@ -119,9 +119,15 @@ after_build:
     - cd C:\projects\oiio
     - 7z a oiio.zip C:\projects\oiio\build
 
+    - cd C:\projects\oiio
+    - 7z a deps.zip C:\tools\vcpkg\installed
+
 artifacts:
   - path: oiio.zip
     name: OpenImageIO
+
+  - path: deps.zip
+    name: Dependencies
 
 matrix:
     fast_finish: true
