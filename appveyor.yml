@@ -117,12 +117,15 @@ build_script:
 
 after_build:
     - cd C:\projects\oiio
-    - 7z a oiio.zip C:\projects\oiio\build
 
-    - cd C:\projects\oiio
+    - 7z a build.zip C:\projects\oiio\build
     - 7z a deps.zip C:\tools\vcpkg\installed
+    - 7z a oiio.zip "C:\Program Files\OpenImageIO"
 
 artifacts:
+  - path: build.zip
+    name: Build
+
   - path: oiio.zip
     name: OpenImageIO
 
