@@ -113,7 +113,7 @@ build_script:
   - dir c:\projects\oiio
   - dir c:\projects\oiio\build
   - dir c:\projects\oiio\build\windows64
-  - cmake --build . --config %CONFIGURATION%
+  - cmake --build . --config %CONFIGURATION% --target install
 
 after_build:
     - cd C:\projects\oiio
